@@ -4,6 +4,7 @@ author:
   - 'Philippe Bruhat (BooK) <book@cpan.org>'
 build_requires:
   Test::MetaSyntactic: '0'
+  Test::More: '0'
 configure_requires:
   ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
@@ -15,9 +16,10 @@ meta-spec:
 name: Acme-MetaSyntactic-cpanauthors
 requires:
   Acme::CPANAuthors: '0'
+  Acme::CPANAuthors::MetaSyntactic: '0'
   Acme::MetaSyntactic::MultiList: '0'
   strict: '0'
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Acme-MetaSyntactic-cpanauthors
   repository: http://github.com/book/Acme-MetaSyntactic-cpanauthors.git
-version: '1.000'
+version: '1.001'

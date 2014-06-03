@@ -22,13 +22,15 @@ my %WriteMakefileArgs = (
   "NAME" => "Acme::MetaSyntactic::cpanauthors",
   "PREREQ_PM" => {
     "Acme::CPANAuthors" => 0,
+    "Acme::CPANAuthors::MetaSyntactic" => 0,
     "Acme::MetaSyntactic::MultiList" => 0,
     "strict" => 0
   },
   "TEST_REQUIRES" => {
-    "Test::MetaSyntactic" => 0
+    "Test::MetaSyntactic" => 0,
+    "Test::More" => 0
   },
-  "VERSION" => "1.000",
+  "VERSION" => "1.001",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -37,8 +39,10 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Acme::CPANAuthors" => 0,
+  "Acme::CPANAuthors::MetaSyntactic" => 0,
   "Acme::MetaSyntactic::MultiList" => 0,
   "Test::MetaSyntactic" => 0,
+  "Test::More" => 0,
   "strict" => 0
 );
 

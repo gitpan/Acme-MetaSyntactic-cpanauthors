@@ -1,5 +1,5 @@
 package Acme::MetaSyntactic::cpanauthors;
-$Acme::MetaSyntactic::cpanauthors::VERSION = '1.000';
+$Acme::MetaSyntactic::cpanauthors::VERSION = '1.001';
 use strict;
 use Acme::MetaSyntactic::MultiList;
 use Acme::CPANAuthors;
@@ -7,7 +7,7 @@ our @ISA = qw( Acme::MetaSyntactic::MultiList );
 
 my %names = (
     map {
-        $_ => map { tr/-/_/; lc $_ } join ' ', Acme::CPANAuthors->new($_)->id
+        lc $_ => map { tr/-/_/; $_ } join ' ', Acme::CPANAuthors->new($_)->id
         } Acme::CPANAuthors->_list_categories()
 );
 
@@ -42,6 +42,13 @@ Philippe Bruhat (BooK)
 =head1 CHANGES
 
 =over 4
+
+=item *
+
+2014-06-03 - v1.001
+
+Fixed the categories to be all lowercase, and the names to be in uppercase
+(as in PAUSE). Published one day late because of a disk crash.
 
 =item *
 
